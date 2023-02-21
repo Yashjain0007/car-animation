@@ -1,0 +1,86 @@
+/* .load {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-left: 10px blue solid;
+  border-bottom: 10px rgb(178, 178, 193) solid;
+  border-right: 10px rgb(178, 178, 193) solid;
+  border-top: 10px rgb(178, 178, 193) solid;
+  animation: 3s load infinite linear;
+}
+@keyframes load {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.image > img {
+  /* position: absolute; */
+  width: 200px;
+}
+
+.container {
+  width: 100vh;
+}
+.image,
+.wheels {
+  width: 100vh;
+  position: absolute;
+  animation-name: car;
+  animation-duration: 10s;
+  animation-iteration-count: 3;
+}
+.wheels {
+  display: flex;
+  flex-flow: row wrap;
+  width: 130px;
+}
+.wheels img {
+  width: 50px;
+  border-radius: 50%;
+  animation-name: wheels;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+.wheels .first {
+  left: 15px;
+  top: 45px;
+}
+.wheels .second {
+  left: 135px;
+  top: 45px;
+}
+@keyframes wheels {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes car {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    left: 100vh;
+    top: 0;
+  }
+  50% {
+    left: 100vh;
+    top: 100vh;
+  }
+  75% {
+    top: 100vh;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
